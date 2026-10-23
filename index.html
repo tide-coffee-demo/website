@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tide Coffee</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="" width="72" height="72">
+    <h1>Tide Coffee</h1>
+    <p>Small-batch coffee, roasted on the coast every week.</p>
+  </header>
+
+  <main>
+    <h2>Shop</h2>
+    <ul id="shop" class="shop"></ul>
+
+    <h2>Wholesale</h2>
+    <p>Cafés buy by the pound: <strong>$11 a pound</strong>, roasted to order.
+      Write to <a href="mailto:wholesale@tidecoffee.test">wholesale@tidecoffee.test</a>.</p>
+  </main>
+
+  <footer>© Tide Coffee</footer>
+
+  <script>
+    fetch('data/products.json')
+      .then((r) => r.json())
+      .then((products) => {
+        document.getElementById('shop').innerHTML = products
+          .map((p) => `<li><h3>${p.name}</h3><p>${p.size} · ${p.notes}</p><p class="price">$${p.price}</p></li>`)
+          .join('');
+      });
+  </script>
+</body>
+</html>

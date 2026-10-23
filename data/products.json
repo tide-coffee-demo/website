@@ -1,0 +1,6 @@
+[
+  { "id": "house-12", "name": "House Blend", "size": "12 oz", "price": 18, "notes": "Chocolate, toasted almond" },
+  { "id": "regular-box", "name": "Regular Box", "size": "3 × 12 oz", "price": 24, "notes": "Our three everyday roasts, monthly" },
+  { "id": "ethiopia-12", "name": "Ethiopia Guji", "size": "12 oz", "price": 21, "notes": "Blueberry, jasmine" },
+  { "id": "decaf-12", "name": "Swiss Water Decaf", "size": "12 oz", "price": 17, "notes": "Caramel, cocoa" }
+]
